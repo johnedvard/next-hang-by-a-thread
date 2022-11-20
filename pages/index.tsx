@@ -1,6 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import styles from '../styles/Home.module.css';
-import Script from 'next/script';
 import { init } from '../public/lib/game.js';
 
 export default function Home() {
@@ -14,9 +12,9 @@ export default function Home() {
   }, [deathCount]);
 
   return (
-    <div className={styles.container}>
+    <div>
+      <span>Death count: {deathCount} (Displayed on Next.js website)</span>
       <div id='wrap'>
-        <span>{deathCount}</span>
         <div id='loading-wrapper' className='overlay hide'>
           <div id='loading'></div>
         </div>
@@ -70,7 +68,6 @@ export default function Home() {
         </div>
         <div id='hint'></div>
       </div>
-      <Script src='../public/lib/game.js' />
     </div>
   );
 }
