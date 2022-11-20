@@ -3618,7 +3618,7 @@ const $5ecbecb36de493ae$var$onNavigateDown = (evt, btn)=>{
 const $a37e21e51a445407$export$73c66cf4705f3263 = ()=>{};
 
 
-const $cf838c15c8b009ba$export$2cd8252107eb640b = ({ deathCount: deathCount , setDeathCount: setDeathCount  })=>{
+const $cf838c15c8b009ba$export$b8b10c7c42429e76 = ({ deathCount: deathCount , setDeathCount: setDeathCount  })=>{
     $cf838c15c8b009ba$var$addStyles();
     new (0, $4a0201df2f87ea05$export$985739bfa5723e08)({
         deathCount: deathCount,
@@ -3661,5 +3661,5 @@ const $cf838c15c8b009ba$var$loadNearApi = ()=>{
 };
 
 
-export {$cf838c15c8b009ba$export$2cd8252107eb640b as init};
+export {$cf838c15c8b009ba$export$b8b10c7c42429e76 as initGame};
 //# sourceMappingURL=game.js.map

@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
-import { init } from '../public/lib/game.js';
+import { initGame } from '../public/lib/game.js';
 
 export default function Home() {
   const isGameInitialized = useRef(false);
-  const [deathCount, setDeathCount] = useState(1);
+  const [deathCount, setDeathCount] = useState(0);
   useEffect(() => {
     if (!isGameInitialized.current) {
       isGameInitialized.current = true;
-      init({ deathCount, setDeathCount });
+      initGame({ deathCount, setDeathCount });
     }
   }, [deathCount]);
 
