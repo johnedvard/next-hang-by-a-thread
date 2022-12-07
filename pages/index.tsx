@@ -6,6 +6,10 @@ export default function Home() {
   const [deathCount, setDeathCount] = useState(0);
   const [levelsCompleted, setLevelsCompleted] = useState({});
 
+  /**
+   * The game will set the initial state by reading localStorage. Key used is `level${id}`, where id is >= 1
+   * The game will update the state every time a level is complete
+   */
   const updateLevelsCompleted = useCallback(
     (levels: { [key: string]: boolean }) => {
       setLevelsCompleted((state) => ({ ...state, ...levels }));
