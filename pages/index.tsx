@@ -3,7 +3,7 @@ import { initGame } from '../public/lib/game.js';
 
 export default function Home() {
   const isGameInitialized = useRef(false);
-  const [deathCount, setDeathCount] = useState(0);
+  const [deathCount, setDeathCount] = useState(0); // deathCount is stored in localStorage with key: 'deathCount'. The game will set the count correctly
   const [levelsCompleted, setLevelsCompleted] = useState({});
 
   /**
@@ -20,9 +20,9 @@ export default function Home() {
   useEffect(() => {
     if (!isGameInitialized.current) {
       isGameInitialized.current = true;
-      initGame({ deathCount, setDeathCount, updateLevelsCompleted });
+      initGame({ setDeathCount, updateLevelsCompleted });
     }
-  }, [deathCount, updateLevelsCompleted]);
+  }, [updateLevelsCompleted]);
 
   return (
     <div>
